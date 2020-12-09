@@ -81,12 +81,13 @@ function App() {
         return { pid };
     }
 
-    const handleSorting = (event) => {        
-        setProducts([])        
-        setPageNumber(1)        
-        setIsFetching(false)
-        setLoading(false)                     
-        setSort(event.target.value)
+    const handleSorting = async (event) => {        
+        await setProducts([])        
+        await setPageNumber(1)        
+        await setIsFetching(false)
+        await setLoading(false)
+        await setSort(event.target.value)
+        await console.log(loading, isFetching)
     }
 
     return (
